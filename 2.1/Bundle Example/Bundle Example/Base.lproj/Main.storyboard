@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bundle_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llS-IQ-lf2">
+                                <rect key="frame" x="171.5" y="333" width="71" height="30"/>
+                                <state key="normal" title="Play Piano"/>
+                                <connections>
+                                    <action selector="playPiano:" destination="BYZ-38-t0r" eventType="touchUpInside" id="be7-0i-xU9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srp-Va-Xac">
+                                <rect key="frame" x="169.5" y="413" width="75" height="30"/>
+                                <state key="normal" title="Play Organ"/>
+                                <connections>
+                                    <action selector="playOrgan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qvo-50-WcK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0PH-0I-TCb">
+                                <rect key="frame" x="119" y="543" width="176" height="30"/>
+                                <state key="normal" title="Copy piano to documents"/>
+                                <connections>
+                                    <action selector="copyPianoToDocuments:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Yx-tD-Zfe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="llS-IQ-lf2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CCo-d3-zlA"/>
+                            <constraint firstItem="0PH-0I-TCb" firstAttribute="top" secondItem="srp-Va-Xac" secondAttribute="bottom" constant="100" id="UDb-Mh-wrh"/>
+                            <constraint firstItem="srp-Va-Xac" firstAttribute="top" secondItem="llS-IQ-lf2" secondAttribute="bottom" constant="50" id="aTR-jp-rXH"/>
+                            <constraint firstItem="llS-IQ-lf2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="moT-Mh-LNr"/>
+                            <constraint firstItem="0PH-0I-TCb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nyF-ic-Jrs"/>
+                            <constraint firstItem="srp-Va-Xac" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o8V-QP-f5V"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="80"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
