@@ -1,0 +1,7 @@
+source 'https://cdn.cocoapods.org/'
+platform :ios, '13.0'
+use_frameworks!
+
+target 'Example 2.3' do
+    pod 'RealmSwift', '=10.1.4'
+end
