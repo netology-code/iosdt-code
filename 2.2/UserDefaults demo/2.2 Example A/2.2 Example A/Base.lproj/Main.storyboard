@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="__2_Example_A" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="oHG-Io-2fj">
+                                <rect key="frame" x="20" y="144" width="374" height="0.0"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CZ-a3-5Aq" userLabel="Button - Read Values">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                        <state key="normal" title="Read Values"/>
+                                        <connections>
+                                            <action selector="readValues:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S8E-7J-iVi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Smg-sK-xQI" userLabel="Button - Write Values">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                        <state key="normal" title="Write Values"/>
+                                        <connections>
+                                            <action selector="writeValues:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RUg-a5-xbC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHE-Wr-Mjh" userLabel="Button - Erase Values">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                        <state key="normal" title="Erase Values"/>
+                                        <connections>
+                                            <action selector="eraseValues:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o47-fm-QUG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtR-Ne-Rf5" userLabel="Button - Read Custom Structure">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                        <state key="normal" title="Read Custom Structure"/>
+                                        <connections>
+                                            <action selector="readCustomStructure:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Kx-bS-Vqc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYU-c7-Pz1" userLabel="Button - Write Custom Structure">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                        <state key="normal" title="Write Custom Structure"/>
+                                        <connections>
+                                            <action selector="writeCustomStructure:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jhG-Ha-pxg"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="luW-Q0-C4V" userLabel="View - Spacing">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="100" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Exf-jf-PPk">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Du-uj-SBq" userLabel="Text Field - Shared Value">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpN-Od-UWo" userLabel="Button - Write Shared Value">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                                <state key="normal" title="Write value to App Group"/>
+                                                <connections>
+                                                    <action selector="writeValueToAppGroup:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3cG-Ti-S8T"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oHG-Io-2fj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1uB-UF-xdR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oHG-Io-2fj" secondAttribute="trailing" constant="20" id="2X9-su-H48"/>
+                            <constraint firstItem="oHG-Io-2fj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="3Vb-Vs-FfH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sharedValueTextField" destination="9Du-uj-SBq" id="y80-5r-7b2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

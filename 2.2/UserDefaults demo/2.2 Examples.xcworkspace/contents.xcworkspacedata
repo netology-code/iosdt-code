@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:2.2 Example A/2.2 Example A.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:2.2 Example B/2.2 Example B.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:2.2 Example Shared Code/2.2 Example Shared Code.xcodeproj">
+   </FileRef>
+</Workspace>
