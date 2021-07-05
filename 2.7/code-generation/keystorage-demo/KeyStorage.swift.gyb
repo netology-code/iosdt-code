@@ -1,0 +1,52 @@
+//
+//  KeyStorage.swift
+//  radare-demo
+//
+//  Created by Mikhail Rakhmalevich on 28.04.2021.
+//
+
+%{
+import os
+
+salt = [ord(byte) for byte in os.urandom(64)]
+
+def chunks(seq, size):
+    return (seq[i:(i + size)] for i in range(0, len(seq), size))
+
+def encode(string, cipher):
+    bytes = string.encode("UTF-8")
+    return [ord(bytes[i]) ^ cipher[i % len(cipher)] for i in range(0, len(bytes))]
+    
+def plain(key, default = ""):
+    return os.getenv(key, default)
+    
+def encoded(key):
+    encodedData = encode(os.getenv(key, ""), salt)
+    return "[" + "".join(["0x%02x, " % byte for byte in encodedData]) + "]"
+}%
+
+import Foundation
+
+final class KeyStorage {
+    static var secretKey: String {
+        let encoded: [UInt8] = ${encoded('CONF_SECRET_KEY')}
+        return decode(encoded: encoded)
+    }
+}
+
+private extension KeyStorage {
+    static func decode(encoded: [UInt8]) -> String {
+        let cipher: [UInt8] = [
+            % for chunk in chunks(salt, 8):
+                ${"".join(["0x%02x, " % byte for byte in chunk])}
+            % end
+        ]
+        
+        let result = String(decoding: encoded.enumerated().map { (offset, element) in
+            element ^ cipher[offset % cipher.count]
+        }, as: UTF8.self)
+        
+        return result
+    }
+}
+

@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  keystorage-demo
+//
+//  Created by Mikhail Rakhmalevich on 28.04.2021.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+CONF_SECRET_KEY = this_is_secret_key
